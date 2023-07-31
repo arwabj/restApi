@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "front": "cd client && npm start",
+    "back": "nodemon server",
+    "dev": "concurrently \"npm run front\" \"npm run back\""
   },
   "keywords": [
     "mongoose",
@@ -18,6 +20,7 @@
     "mongoose": "^7.3.0"
   },
   "devDependencies": {
+    "concurrently": "^8.2.0",
     "dotenv": "^16.1.4",
     "nodemon": "^2.0.22"
   }
